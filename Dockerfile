@@ -2,7 +2,7 @@ FROM blacktop/ghidra:latest
 
 ARG EFISEEK_VERSION="v0.0.3"
 ARG EFISEEK_ZIP="ghidra_10.1.4_PUBLIC_20220604_efiSeek.zip"
-ARG EFISEEK_URL="https://github.com/retrage/efiSeek/releases/download/${EFISEEK_VERSION}}/${EFISEEK_ZIP}"
+ARG EFISEEK_URL="https://github.com/retrage/efiSeek/releases/download/${EFISEEK_VERSION}/${EFISEEK_ZIP}"
 
 # Install dependencies
 RUN apt-get update \

@@ -6,7 +6,7 @@ To use this action, add:
 
 ```yaml
 - name: Analyze UEFI Binary
-  uses: retrage@efiseek-action@main
+  uses: retrage/efiseek-action@main
   with:
     path: Example.efi
     report_path: analysis.xml

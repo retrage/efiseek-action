@@ -1,4 +1,6 @@
-#!/bin/sh -l
+#!/usr/bin/env bash
+
+set -eu
 
 echo "Analyzing $INPUT_PATH..."
 
@@ -17,4 +19,4 @@ mkdir -p $PROJECT_DIR
 
 python3 /gen_report.py $LOG_PATH $REPORT_PATH
 
-echo "::set-output name=report::cat $REPORT_PATH`"
+echo "::set-output name=report::$(cat $REPORT_PATH)"
