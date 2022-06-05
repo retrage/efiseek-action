@@ -1,0 +1,19 @@
+name: CI
+
+on: [push]
+
+jobs:
+  test:
+    name: CI Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: retrage/efiseek-action@main
+        with:
+          path: tests/binaries/DoubleGetVariable.efi
+          report_path: analysis.xml
+
+      - uses: EnricoMi/publish-unit-test-result-action@v1.36
+        with:
+          files: analysis.xml
