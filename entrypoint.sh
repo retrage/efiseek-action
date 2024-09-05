@@ -19,4 +19,4 @@ mkdir -p $PROJECT_DIR
 
 python3 /gen_report.py $LOG_PATH $REPORT_PATH
 
-echo "::set-output name=report::$(cat $REPORT_PATH)"
+echo "report=$(cat $REPORT_PATH)" >> $GITHUB_OUTPUT
