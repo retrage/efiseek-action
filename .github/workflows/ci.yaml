@@ -14,8 +14,27 @@ jobs:
       - uses: retrage/efiseek-action@main
         with:
           path: tests/binaries/DoubleGetVariable.efi
-          report_path: analysis.xml
+          report_path: analysis-0.xml
+
+      - uses: retrage/efiseek-action@main
+        with:
+          path: tests/binaries/DoubleGetVariable2.efi
+          report_path: analysis-1.xml
+
+      - uses: retrage/efiseek-action@main
+        with:
+          path: tests/binaries/GlobalDoubleGetVariable.efi
+          report_path: analysis-2.xml
+
+      - uses: retrage/efiseek-action@main
+        with:
+          path: tests/binaries/GlobalDoubleGetVariable2.efi
+          report_path: analysis-3.xml
 
       - uses: EnricoMi/publish-unit-test-result-action@v2.17.1
         with:
-          files: analysis.xml
+          files: |
+            analysis-0.xml
+            analysis-1.xml
+            analysis-2.xml
+            analysis-3.xml
