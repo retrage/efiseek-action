@@ -1,4 +1,4 @@
-FROM ghcr.io/blacktop/ghidra:latest
+FROM ghcr.io/blacktop/ghidra:10.1.4
 
 ARG EFISEEK_VERSION="v0.0.3"
 ARG EFISEEK_ZIP="ghidra_10.1.4_PUBLIC_20220604_efiSeek.zip"
